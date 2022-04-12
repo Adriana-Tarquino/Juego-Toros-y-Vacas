@@ -99,10 +99,11 @@ class Juego{
         intento1 = EscribirIntentos(codigosecreto,codigoIntento);
         if( cadena == "")
         {
-            alert("Ninguna coincidencia");
+            alert("Ninguna coincidencia   :(");
         }
        return cadena;
     }
+
 }
 
 export default Juego;
