@@ -71,7 +71,9 @@ class Juego{
     {
       let cadToros =this.CompararSiEsToro(codigosecreto,codigoIntento);
       let cadVacas = this.CompararSiEsVaca(codigosecreto,codigoIntento);   
+      let cadTernera = this.compararTernera(codigosecreto,codigoIntento);
       let CadToroVaca=cadToros.concat(cadVacas);
+      cadenaVacas = cadenaVacas.concat(cadTernera);
       return CadToroVaca;
     }
     RestarIntentosJuego()
@@ -103,6 +105,7 @@ class Juego{
         }
        return cadena;
     }
+   
     compararTernera(codigosecreto,codigoIntento)
     {
         let cadena = "";
@@ -117,6 +120,20 @@ class Juego{
                 }
             }
         }
+        return cadena;
+    }
+    Bisonte(codigosecreto,codigoIntento)
+    {
+        let bisonte = '%';
+        let cadena = "";
+        for(var i =0; i<codigosecreto; i++)
+        {
+            if(codigosecreto.at(i) %2 == 0)
+            {
+                cadena += bisonte;
+            }
+        }
+       
         return cadena;
     }
 }

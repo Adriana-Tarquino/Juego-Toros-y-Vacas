@@ -46,4 +46,10 @@ describe("Juego", () => {
   it("Verificar si es ternera: ", () => {
     expect(jugar.compararTernera("1234","5555")).toEqual("#");
   });
+  it("Verificar si es ternera: ", () => {
+    expect(jugar.compararTernera("1234","1555")).toEqual("!#");
+  });
+  it("Verificar si es bisonte: ", () => {
+    expect(jugar.compararTernera("1234","1555")).toEqual("%%");
+  });
 });
