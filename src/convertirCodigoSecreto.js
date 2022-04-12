@@ -41,8 +41,7 @@ class Juego{
     CompararSiEsToro(codigosecreto,codigoIntento)
     {
         let toro = '!';
-        let cadenaToros = '';
-        for (var i =0; i < codigoIntento.length; i++)
+       if (codigoIntento.charAt(0) === codigosecreto.charAt(0))
         {
             if (codigoIntento.charAt(i) === codigosecreto.charAt(i))
             {
