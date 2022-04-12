@@ -57,13 +57,14 @@ class Juego{
     CompararSiEsToro(codigosecreto,codigoIntento)
     {
         let toro = '!';
-       if (codigoIntento.charAt(0) === codigosecreto.charAt(0))
-        {
+        let cadenaToros = "";
+       for(var i = 0; i< codigosecreto.length; i++)
+       {
             if (this.compararCadenas(codigosecreto,codigoIntento,i,i) == true)
             {
                 cadenaToros += toro;
             }
-        }
+       }        
        return cadenaToros;
     }  
     juegoToroVaca(codigosecreto,codigoIntento)
@@ -102,7 +103,22 @@ class Juego{
         }
        return cadena;
     }
-
+    compararTernera(codigosecreto,codigoIntento)
+    {
+        let cadena = "";
+        let ternera = '#';
+        for(var i=0; i< i< codigosecreto.length; i++)
+        {
+            for(var j=0; j< codigoIntento.length; j++)
+            {
+                if((codigosecreto.charAt(i) === codigoIntento.charAt(j) +1 ) || (codigosecreto.charAt(i) === codigoIntento.charAt(j)-1))
+                {
+                    cadena += ternera;    
+                }
+            }
+        }
+        return cadena;
+    }
 }
 
 export default Juego;

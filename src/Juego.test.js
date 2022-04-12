@@ -43,4 +43,7 @@ describe("Juego", () => {
   it("Volver a jugar", () => {
     expect(jugar.juegoToroVaca("1234","5555")).toEqual("");
   });
+  it("Verificar si es ternera: ", () => {
+    expect(jugar.compararTernera("1234","5555")).toEqual("#");
+  });
 });
